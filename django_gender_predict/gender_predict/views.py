@@ -4,8 +4,8 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder,StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-
 from sklearn.svm import SVR
+
 def home(request):
 
     if request.method =='POST':
