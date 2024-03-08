@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Prediction Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-container {
+            text-align: center;
+        }
+        .result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .btn-home {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container result-container">
+        <h2 class="text-center mb-4">Gender Prediction Result</h2>
+        <div class="result">
+            {% if gender %}
+                Predicted gender: <strong> {{ gender }}</strong>
+            {% else %}
+                <strong> No prediction available. </strong>
+            {% endif %}
+        </div>
+        <a href="{% url 'home' %}" class="btn btn-primary btn-home">Again</a>
+    </div>
+</body>
+</html>
