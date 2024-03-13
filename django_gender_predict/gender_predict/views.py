@@ -25,13 +25,10 @@ def home(request):
         svr_reg = SVR(kernel='rbf',degree=3)
 
         scaler_x = StandardScaler() # !!!!
-        scaler_y = StandardScaler() # !!!!
 
         x_train_sc = scaler_x.fit_transform(x_train)
 
-        y_train_sc = scaler_y.fit_transform(y_train)
-
-        svr_reg.fit(x_train_sc, y_train_sc)
+        svr_reg.fit(x_train_sc, y_train)
         
 
         user_data = pd.DataFrame({'Height': [request.POST['height']], 'Weight': [request.POST['weight']], 'Age': [request.POST['age']]})
@@ -41,7 +38,7 @@ def home(request):
 
         user_pred = svr_reg.predict(user_data_sc)
 
-        if user_pred <=0:
+        if user_pred <=0.5:
             gender = "Female"
         else:
             gender = "Male"    
