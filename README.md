@@ -10,7 +10,7 @@ This project uses machine learning to predict gender based on image data. The sy
 
 ## Technologies Used:
 - **Python**: Programming language for data processing and modeling.
-- **TensorFlow/Keras**: Frameworks used for building and training CNN models.
+- **TensorFlow/Keras**: Frameworks used for building and training CNN models
 - **NumPy & Pandas**: For data manipulation and preprocessing.
 - **Matplotlib & Seaborn**: For visualization of training results and evaluation metrics.
 
